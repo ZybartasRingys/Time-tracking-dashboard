@@ -19,35 +19,69 @@
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
+  gap: 20px;
+  margin-left: 20px;
 }
 
 .main-card {
   height: 518px;
   border-radius: 15px;
-  background-color: #7536d3;
+  background-color: #5847eb;
 }
 
 .main-card .avatar {
   width: 78px;
   height: 78px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-top: 32px;
+  margin-left: 35px;
 }
 
 .main-card .main {
   height: 354px;
+  z-index: 1000;
+}
+
+.main-card .main-card-text {
+  margin-left: 35px;
+}
+
+.main-card .main-card-text h2 {
+  font-size: 15px;
+  line-height: 18px;
+  color: #bdc1ff;
+}
+
+.main-card .main-card-text p {
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 47px;
+  color: white;
 }
 
 .main-card-body {
-  width: 255px;
+  width: 100%;
   height: 164px !important;
   border-radius: 15px;
   color: white;
   background-color: #1c1f4a;
 }
 
-.card {
-  border: none;
-  width: 255px;
+.main-card-body .options {
+  margin-left: 35px;
+  margin-top: 30px;
+}
+
+.main-card-body .options .time {
+  margin-bottom: 22px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #6f76c8;
+}
+
+.main-card-body .options .time.active {
+  color: white;
 }
 
 .top-img {
@@ -72,15 +106,34 @@
   color: white;
 }
 
-.work-card-top {
-  background-color: #ff8c66;
+.card-body .card-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: white;
 }
 
-.play-card-top {
-  background-color: #56c2e6;
+.card-body .current {
+  font-weight: 300;
+  font-size: 56px;
+  line-height: 66px;
 }
 
-.time.active {
-  color: red;
+.card-body .last {
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.card {
+  border: none;
+}
+
+.cards-top {
+  border: none;
+}
+
+.dots {
+  width: 16px;
+  height: 5px;
 }
 /*# sourceMappingURL=main.css.map */
