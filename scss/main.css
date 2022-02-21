@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+.body {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.main-col {
+  height: 518px;
+}
+
+.upper-cards,
+.lower-cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.main-card {
+  height: 518px;
+  border-radius: 15px;
+  background-color: #7536d3;
+}
+
+.main-card .avatar {
+  width: 78px;
+  height: 78px;
+}
+
+.main-card .main {
+  height: 354px;
+}
+
+.main-card-body {
+  width: 255px;
+  height: 164px !important;
+  border-radius: 15px;
+  color: white;
+  background-color: #1c1f4a;
+}
+
+.card {
+  border: none;
+  width: 255px;
+}
+
+.top-img {
+  width: 78px;
+  height: 78px;
+  z-index: 1;
+  margin-top: -10px;
+}
+
+.card-img-top {
+  border: 1px solid black;
+  height: 66px;
+  border-radius: 15px;
+}
+
+.card-body {
+  height: 199px;
+  margin-top: -20px;
+  background-color: #1c1f4a;
+  border-radius: 15px;
+  z-index: 1000;
+  color: white;
+}
+
+.work-card-top {
+  background-color: #ff8c66;
+}
+
+.play-card-top {
+  background-color: #56c2e6;
+}
+
+.time.active {
+  color: red;
+}
+/*# sourceMappingURL=main.css.map */

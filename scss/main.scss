@@ -1,0 +1,93 @@
+@import "./variables";
+
+.body {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.main-col {
+  height: 518px;
+}
+
+.upper-cards,
+.lower-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+//  Cards
+
+// main card
+.main-card {
+  height: 518px;
+  border-radius: 15px;
+  background-color: $Violet;
+
+  .avatar {
+    width: 78px;
+    height: 78px;
+  }
+
+  .main {
+    height: 354px;
+  }
+}
+
+.main-card-body {
+  width: 255px;
+  height: 164px !important;
+  border-radius: 15px;
+  color: white;
+  background-color: $Darkblue;
+}
+
+// main card end
+
+.card {
+  border: none;
+  width: 255px;
+}
+
+.top-img {
+  width: 78px;
+  height: 78px;
+  z-index: 1;
+  margin-top: -10px;
+}
+
+.card-img-top {
+  border: 1px solid black;
+  height: 66px;
+  border-radius: 15px;
+}
+
+.card-body {
+  height: 199px;
+  margin-top: -20px;
+  background-color: $Darkblue;
+  border-radius: 15px;
+  z-index: 1000;
+  color: white;
+}
+
+//work card
+
+.work-card-top {
+  background-color: $Lightred1;
+}
+
+// play card
+
+.play-card-top {
+  background-color: $Softblue;
+}
+
+.time.active {
+  color: red;
+}
