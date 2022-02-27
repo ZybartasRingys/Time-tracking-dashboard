@@ -1,0 +1,10 @@
+@import "../variables";
+
+@media (max-width: 767px) {
+  // main card
+
+  .regular-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
