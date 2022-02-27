@@ -12,53 +12,69 @@ let data = {};
 fetch("data.json")
   .then((resp) => resp.json())
   .then((jsonData) => {
+    // forEach metodas visiems kartojamiesiams pritaiko callback funkcijas insertAdjacentHTM ir  createRegularCard
     jsonData.forEach((element) => {
       container.insertAdjacentHTML(
         "beforeend",
         createRegularCard(element, timeframe)
       );
 
-      // array to dict
+      // array to dictionary
       jsonData.forEach((element) => {
         data[element.title] = element.timeframes;
       });
     });
 
-    jsonData.forEach((element) => {
-      data[element.title] = element.timeframes;
-    });
-
+    // pasirinkti visas korteles
     regularCards = document.querySelectorAll(".regular-card");
   });
+
+//forEach metodas ir click eventas su callback funckija optionsOnClick
 
 timeOption.forEach((element) => {
   element.addEventListener("click", optionsOnClick);
 });
 
-// functions
+// funkcija
 
 function optionsOnClick(event) {
+  // forEach metodas timeOptions nuimti active class
+
   timeOption.forEach((element) => {
     element.classList.remove("active");
   });
+
+  // prideti active classe pasirinktam elemntui
+
   event.target.classList.add("active");
+
+  // timeframe kintamajam priskiriamas pasirinktojo elemento vidinis tekstas
   timeframe = event.target.innerText.toLowerCase();
 
+  // funckija
   updateCards(timeframe);
 }
 
 // update cards
 
 function updateCards(timeframe) {
+  // kortelems taikomas forEach metodas ir callback funkcija update card su parametrais card ir timeframe
   regularCards.forEach((card) => {
     updateCard(card, timeframe);
   });
 }
 
+// funckija
+
 function updateCard(card, timeframe) {
+  // title priskiriamas kiekvienos korteles title vidinis tekstas
   const title = card.querySelector(".card-title").innerText;
+
+  // current
   const current = data[title][timeframe]["current"];
   const previous = data[title][timeframe]["previous"];
+
+  console.log(data);
 
   const timeframeMsg = {
     daily: "Yesterday",
@@ -66,6 +82,7 @@ function updateCard(card, timeframe) {
     monthly: "Last Month",
   };
 
+  // pasirinkta korteles
   const hoursElement = card.querySelector(".current");
   hoursElement.innerText = `${current}hrs`;
   const msgElement = card.querySelector(".last");

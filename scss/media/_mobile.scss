@@ -7,4 +7,12 @@
     display: grid;
     grid-template-columns: 1fr;
   }
+
+  .menu-card {
+    margin-bottom: 20px !important;
+  }
+
+  .menu {
+    justify-content: space-between !important;
+  }
 }

@@ -13,10 +13,15 @@ body {
 }
 
 main {
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.main-col {
+  height: 100%;
 }
 
 // main card
@@ -113,6 +118,7 @@ main {
   border-radius: 10px;
   padding-left: 20px;
   padding-right: 20px;
+  cursor: pointer;
 
   .card-title {
     font-style: normal;
@@ -150,6 +156,7 @@ main {
   width: 21px;
   height: 5px;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 // different cards
