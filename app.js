@@ -74,8 +74,6 @@ function updateCard(card, timeframe) {
   const current = data[title][timeframe]["current"];
   const previous = data[title][timeframe]["previous"];
 
-  console.log(data);
-
   const timeframeMsg = {
     daily: "Yesterday",
     weekly: "Last Week",
